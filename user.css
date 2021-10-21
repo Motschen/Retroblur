@@ -8,10 +8,9 @@
   --spice-misc: rgba(30, 30, 30, 0.8);
   --spice-player: rgba(30, 30, 30, 0.8);
 }
-/* https://wallpapercave.com/wp/wp5003466.jpg */
-/* https://wallpapercave.com/wp/wp4786586.jpg */
+/* Source: https://wallpapercave.com/wp/wp5003466.jpg */
 body, .root {
-    background-image: url("https://wallpapercave.com/wp/wp5003466.jpg") !important;
+    background-image: url("./background_purple.jpg") !important;
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -586,3 +585,66 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .npv-progress-bar__rail {
   height: 6px;
 }
+
+
+/* Lyrics */
+.lyrics-lyricsContainer-LyricsContainer {
+    height: calc(100vh - 116px) !important;
+}
+.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine:first-of-type {
+    opacity: 0.9 !important;
+}
+.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine:nth-child(2) {
+    color: var(--lyrics-color-active) !important;
+    opacity: 1 !important;
+    text-shadow: 0 0 15px var(--spice-button-disabled) !important;
+}
+.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine:nth-child(3) {
+    opacity: 1 !important;
+    text-shadow: 0 0 10px var(--lyrics-color-inactive) !important;
+}
+.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine:nth-child(4) {
+    opacity: 0.9 !important;
+}
+.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine:last-of-type {
+    opacity: 0.5 !important;
+}
+
+@keyframes glow {
+  from {
+      text-shadow: 0 0 10px var(--spice-button);
+    }
+  to {
+    }
+}
+/* Based on https://cssdeck.com/blog/pure-css-bouncing-ball/ */
+@keyframes moveX {
+  from { left: 0px; } to { left: 65vw; }
+}
+@keyframes moveY {
+  from { top: 0px; } to { top: 80vh; }
+}
+.lyrics-lyricsContainer-LyricsUnavailablePage {
+    padding: 10px !important;
+    white-space: nowrap;
+    height: 13%;
+    width: 20%;
+    position: absolute;
+    animation: glow 3s ease infinite alternate,
+    moveX 4.05s linear 0s infinite alternate,
+    moveY 4.4s linear 0s infinite alternate-reverse;
+}
+.lyrics-lyricsContainer-LyricsBackground {
+    opacity: 0.5 !important;
+}
+/* Change text of the container
+
+.lyrics-lyricsContainer-LyricsUnavailablePage > span {
+  visibility: hidden;
+}
+.lyrics-lyricsContainer-LyricsUnavailablePage > span:after {
+  content: '...' !important;
+  visibility: visible;
+  display: block;
+}
+*/

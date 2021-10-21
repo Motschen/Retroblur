@@ -5,4 +5,6 @@ Based on https://github.com/schnensch0/ziro
 ![Home](https://github.com/Motschen/Retroblur/blob/main/preview/home.png?raw=true)  
   
 ![Playlist](https://github.com/Motschen/Retroblur/blob/main/preview/playlist.png?raw=true)
+
+![Synced Lyrics](https://github.com/Motschen/Retroblur/blob/main/preview/synced_lyrics.png?raw=true)
  </p>
