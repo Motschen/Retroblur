@@ -7,4 +7,6 @@ Based on https://github.com/schnensch0/ziro
 ![Playlist](https://github.com/Motschen/Retroblur/blob/main/preview/playlist.png?raw=true)
 
 ![Synced Lyrics](https://github.com/Motschen/Retroblur/blob/main/preview/synced_lyrics.png?raw=true)
+
+![Missing Lyrics](https://github.com/Motschen/Retroblur/blob/main/preview/missing_lyrics.gif?raw=true)
  </p>
