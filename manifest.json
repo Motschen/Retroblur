@@ -1,0 +1,8 @@
+{
+    "name": "Retroblur",
+    "description": "Spicetify theme incorporating a retro style.",
+    "preview": "preview/playlist.png",
+    "usercss": "user.css",
+    "schemes": "color.ini",
+    "readme": "README.md"
+}
