@@ -6,13 +6,65 @@
   --green: #1db954;
   --spice-main: transparent;
   --spice-misc: rgba(30, 30, 30, 0.8);
-  --spice-player: rgba(30, 30, 30, 0.8);
+  --spice-player: rgba(30, 30, 30, 0.4);
+  --spice-bg: "https://i.imgur.com/Y36v2Bm.jpg";
 }
-/* Source: https://wallpapercave.com/wp/wp5003466.jpg */
-body, .root {
-    background-image: url("https://i.imgur.com/Y36v2Bm.png") !important;
+/* Set the wallpaper to the one matching your color scheme
+ Source: https://wallpapercave.com/wp/wp5003466.jpg
+ Purple: https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true
+ Red: https://github.com/Motschen/Retroblur/blob/main/assets/background_red.jpg?raw=true
+ Green: https://github.com/Motschen/Retroblur/blob/main/assets/background_green.jpg?raw=true
+ Yellow: https://github.com/Motschen/Retroblur/blob/main/assets/background_yellow.jpg?raw=true
+ Blue: https://github.com/Motschen/Retroblur/blob/main/assets/background_blue.jpg?raw=true */
+body {
+    background-image: url("https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true") !important;
     background-repeat: no-repeat;
     background-size: 100%;
+}
+.Root__now-playing-bar {
+    backdrop-filter: blur(14px) !important;
+}
+@keyframes fadingGlow {
+  from {} to { filter: drop-shadow(0 0 6px var(--spice-button)); }
+}
+@keyframes fadingGlowWhite {
+  from {} to { filter: drop-shadow(0 0 6px var(--spice-text)); }
+}
+.gSLhUO:hover, .main-playButton-PlayButton.main-playButton-primary:hover, .main-pageErrorTemplate-errorButton:hover, div.GlueDropTarget.personal-library >*.active:hover, .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive:hover, .main-navBar-navBarLinkActive:hover {
+    animation: fadingGlow 1s ease 0.5 forwards !important;
+}
+a:hover, .control-button-heart:hover, .main-trackList-rowPlayPauseButton:hover {
+    animation: fadingGlowWhite 1s ease 0.5 forwards;
+}
+@keyframes speaker {
+  0% { clip-path: inset(0% 50% 0% 0%) }
+  50% { clip-path: inset(0% 0% 0% 0%) }
+  51% { clip-path: inset(0% 0% 0% 0%) }
+}
+@keyframes speaker2 {
+  0% { visibility: visible }
+  1% { visibility: hidden }
+  51% { visibility: hidden }
+}
+#spicetify-show-list > div:nth-child(8) > a > div.main-rootlist-statusIcons > button > svg > path:nth-child(1),
+#spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button > svg > path:nth-child(1) {
+    animation: speaker 2s steps(2,start) infinite;
+}
+#spicetify-show-list > div:nth-child(8) > a > div.main-rootlist-statusIcons > button > svg > path:nth-child(2),
+#spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button > svg > path:nth-child(2) {
+    animation: speaker2 2s steps(2,start) infinite;
+}
+.main-rootlist-statusIcons > button:hover {
+    animation: initial !important;
+}
+div.GlueDropTarget.personal-library {
+    padding: 0 0px !important;
+}
+.playback-bar .progress-bar__slider {
+    filter: drop-shadow(0 0 6px var(--spice-button));
+}
+._ZB2JcJdiG6rpEgCd3sR {
+    filter: drop-shadow(0 0 10px var(--spice-shadow));
 }
 .main-home-content, .main-entityHeader-backgroundColor, .main-actionBar-ActionBar, .content-spacing, :root, .main-navBar-navBar, .D_XKXBZDhgpM1KrmKy3O, .spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints {
     background-color: transparent !important;
@@ -21,11 +73,8 @@ body, .root {
 }
 .Root__nav-bar {
     background-color: rgba(30, 30, 30, 0.4);
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px) !important;
 }
-a:hover {
-       text-shadow: 0 0 5px var(--spice-text);
-   }
 /* scrollbars */
 .os-scrollbar {
   display: var(--scrollbars);
@@ -55,7 +104,7 @@ a:hover {
 .main-trackList-trackListHeaderRow, .main-trackCreditsModal-header {
   border-bottom: none;
   background-color: rgba(30, 30, 30, 0.4);
-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
 }
 .now-playing-bar-container, ._6e96ad0ba78d75ffb2a0156aa1834a21-scss {
   border-top: none;
@@ -72,7 +121,7 @@ backdrop-filter: blur(14px);
 }
 .main-card-card, .view-homeShortcutsGrid-shortcut {
   background-color: rgba(30, 30, 30, 0.4) !important;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
 }
 /* transitions */
 .main-card-card {
@@ -235,7 +284,7 @@ button.switch {
   background-color: rgba(30, 30, 30, 0.4);
   border-radius: var(--border-radius-1) var(--border-radius-1) 0 0;
   padding: 8px;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
 }
 .main-trackList-indexable {
   border-bottom: 16px solid rgba(30, 30, 30, 0.4) !important;
@@ -334,7 +383,7 @@ button.switch {
 }
 .show-trailer-container, .show-show-episodes > :last-child {
   background-color: rgba(30, 30, 30, 0.4) !important;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
 }
 /* top bar */
 .main-topBar-button, .main-userWidget-box {
@@ -357,7 +406,7 @@ a[class*='-tabBar-headerItemLink']:active {
 /* search */
 .x-searchInput-searchInputInput {
   background-color: rgba(30, 30, 30, 0.4) !important;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
   color: var(--spice-text) !important;
   border-radius: var(--border-radius-2) !important;
 }
@@ -369,7 +418,7 @@ a[class*='-tabBar-headerItemLink']:active {
 }
 .main-heroCard-card, .x-searchResultsTracks-root .main-gridContainer-gridContainer {
   background-color: rgba(30, 30, 30, 0.4) !important;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
   border-radius: var(--border-radius-1);
 }
 /* error */
@@ -383,7 +432,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 }
 .main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus, .playlist-inlineSearchBox-filterInput {
   background-color: rgba(30, 30, 30, 0.4) !important;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
 }
 .profile-userEditDetails-nameInput, .profile-userEditDetails-textElement:focus {
   background: var(--spice-card) !important;
@@ -406,7 +455,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 /* dialogs */
 .main-deletePlaylistDialog-container, .main-deleteFolderDialog-container {
   background-color: rgba(30, 30, 30, 0.4) !important;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
   color: var(--spice-text);
   border-radius: var(--border-radius-1);
 }
@@ -425,7 +474,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 }
 .main-buddyFeed-friendActivity {
   background-color: rgba(30, 30, 30, 0.4) !important;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
   border-radius: var(--border-radius-1);
   margin: 8px;
   padding: 8px 8px 8px 12px;
@@ -442,14 +491,14 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 /* settings */
 .main-dropDown-dropDown, option {
   background-color: rgba(30, 30, 30, 0.4) !important;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
 }
 .main-dropDown-dropDown {
   border-radius: var(--border-radius-2) !important;
 }
 .x-toggle-indicator {
   background-color: rgba(30, 30, 30, 0.4) !important;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
 }
 .x-settings-facebookButton, .main-connectToFacebook-facebookButton {
   color: var(--spice-shadow);
@@ -460,7 +509,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .x-proxySettings-proxyInput {
   border-radius: var(--border-radius-2) !important;
   background-color: rgba(30, 30, 30, 0.4) !important;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px) !important;
 }
 .x-proxySettings-proxyInput::placeholder {
   color: var(--spice-subtext);
@@ -499,7 +548,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .now-playing-bar .cover-art-image {
   border-radius: var(--border-radius-2);
 }
-.playback-bar__progress-time, .main-playbackBarRemainingTime-container {
+.playback-bar__progress-time, .playback-bar__progress-time-elapsed, .main-playbackBarRemainingTime-container {
   position: absolute;
   bottom: -48px;
   right: 250px;
@@ -508,7 +557,10 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .playback-bar__progress-time:first-child {
   margin-right: 30px;
 }
-.playback-bar__progress-time:first-child::after {
+.playback-bar__progress-time-elapsed {
+    margin-right: 43px;
+}
+.playback-bar__progress-time:first-child::after, .playback-bar__progress-time-elapsed::after {
   content: " /";
 }
 .progress-bar__slider {
@@ -586,7 +638,6 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   height: 6px;
 }
 
-
 /* Lyrics */
 .lyrics-lyricsContainer-LyricsContainer {
     height: calc(100vh - 116px) !important;
@@ -611,11 +662,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 }
 
 @keyframes glow {
-  from {
-      text-shadow: 0 0 10px var(--spice-button);
-    }
-  to {
-    }
+  from { text-shadow: 0 0 10px var(--spice-button); } to {}
 }
 /* Based on https://cssdeck.com/blog/pure-css-bouncing-ball/ */
 @keyframes moveX {
