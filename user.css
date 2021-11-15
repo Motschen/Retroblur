@@ -17,7 +17,7 @@
  Yellow: https://github.com/Motschen/Retroblur/blob/main/assets/background_yellow.jpg?raw=true
  Blue: https://github.com/Motschen/Retroblur/blob/main/assets/background_blue.jpg?raw=true */
 body {
-    background-image: url("https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true") !important;
+    background-image: url("https://github.com/Motschen/Retroblur/blob/main/assets/background_red.jpg?raw=true") !important;
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -63,8 +63,8 @@ div.GlueDropTarget.personal-library {
 .playback-bar .progress-bar__slider {
     filter: drop-shadow(0 0 6px var(--spice-button));
 }
-._ZB2JcJdiG6rpEgCd3sR {
-    filter: drop-shadow(0 0 10px var(--spice-shadow));
+.main-coverSlotExpanded-container {
+    -webkit-box-reflect: below;
 }
 .main-home-content, .main-entityHeader-backgroundColor, .main-actionBar-ActionBar, .content-spacing, :root, .main-navBar-navBar, .D_XKXBZDhgpM1KrmKy3O, .spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints {
     background-color: transparent !important;
