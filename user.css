@@ -21,6 +21,27 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+.playlist-item__img {
+    margin-right: 5px;
+    margin-left:15.5px;
+    border-radius: 15%;
+}
+.lEsg6gi7HowFgzWl_634 {
+    --lyrics-color-background: rgba(30, 30, 30, 0.4) !important;
+}
+.main-connectBar-connectBar {
+    opacity: 50%;
+    filter: drop-shadow(0 0 6px var(--spice-button)) !important;
+}
+.yaVzc4bseRnztmfRv_u3, .volume-bar .progress-bar__slider {
+    filter: drop-shadow(0 0 6px var(--spice-button)) !important;
+}
+.main-view-container, .Root__main-view, .os-host-overflow, .os-resize-observer, .os-resize-observer-host, .os-host-overflow>.os-padding {
+    overflow: visible !important;
+}
+.spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints, .main-navBar-navBar, .main-rootlist-rootlistPlaylistsScrollNode, .main-createPlaylistButton-button {
+    padding-top: 0px;
+}
 .Root__now-playing-bar {
     backdrop-filter: blur(14px) !important;
 }
@@ -56,6 +77,12 @@ a:hover, .control-button-heart:hover, .main-trackList-rowPlayPauseButton:hover {
 }
 .main-rootlist-statusIcons > button:hover {
     animation: initial !important;
+}
+._BR2wjXQJR1Enau4faXC {
+    padding: 4px 0 0 13px;
+}
+#main > div > div.Root__top-container > div.Root__now-playing-bar > footer > div > div.main-nowPlayingBar-right > div > div.GlueDropTarget.GlueDropTarget--tracks.GlueDropTarget--local-tracks.GlueDropTarget--episodes > div > button > span > svg {
+    fill: var(--spice-button);
 }
 div.GlueDropTarget.personal-library {
     padding: 0 0px !important;
@@ -103,7 +130,7 @@ div.GlueDropTarget.personal-library {
 /* remove dividers */
 .main-trackList-trackListHeaderRow, .main-trackCreditsModal-header {
   border-bottom: none;
-  background-color: rgba(30, 30, 30, 0.4);
+  background-color: rgba(30, 30, 30, 0.4) !important;
   backdrop-filter: blur(14px) !important;
 }
 .now-playing-bar-container, ._6e96ad0ba78d75ffb2a0156aa1834a21-scss {
@@ -427,7 +454,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 }
 /* modals */
 .main-trackCreditsModal-container, .main-aboutRecsModal-container, .main-playlistEditDetailsModal-container, .profile-userEditDetails-container, .artist-artistAbout-modal {
-  background-color: transparent !important;
+
   border-radius: var(--border-radius-1) !important;
 }
 .main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus, .playlist-inlineSearchBox-filterInput {
@@ -553,6 +580,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   bottom: -48px;
   right: 250px;
   color: var(--spice-text) !important;
+  filter: drop-shadow(0 0 6px var(--spice-text)) !important;
 }
 .playback-bar__progress-time:first-child {
   margin-right: 30px;
@@ -637,28 +665,11 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .npv-progress-bar__rail {
   height: 6px;
 }
-
 /* Lyrics */
-.lyrics-lyricsContainer-LyricsContainer {
-    height: calc(100vh - 116px) !important;
-}
-.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine:first-of-type {
-    opacity: 0.9 !important;
-}
-.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine:nth-child(2) {
+.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine.lyrics-lyricsContainer-LyricsLine-active {
     color: var(--lyrics-color-active) !important;
     opacity: 1 !important;
     text-shadow: 0 0 15px var(--spice-button-disabled) !important;
-}
-.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine:nth-child(3) {
-    opacity: 1 !important;
-    text-shadow: 0 0 10px var(--lyrics-color-inactive) !important;
-}
-.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine:nth-child(4) {
-    opacity: 0.9 !important;
-}
-.lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine:last-of-type {
-    opacity: 0.5 !important;
 }
 
 @keyframes glow {
@@ -695,3 +706,39 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   display: block;
 }
 */
+
+/*
+CANVAS!!!
+*/
+/* Fill and center canvas, put it between background and title. Hide when not active */
+#CanvasWrapper {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* Show the canvas! */
+.canvas-show #CanvasWrapper {
+  display: flex;
+}
+
+/* Border and shadow the video so it looks nice */
+#CanvasDisplay {
+  height: 100%;
+  width: auto;
+  background: none;
+  margin: 0;
+  text-align: center;
+  border: 1px solid #00000055;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  box-shadow: 1px 0px 20px 20px #00000055;
+}
