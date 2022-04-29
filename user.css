@@ -37,7 +37,7 @@ body {
     filter: drop-shadow(0 0 6px var(--spice-button)) !important;
 }
 .main-view-container, .Root__main-view, .os-host-overflow, .os-resize-observer, .os-resize-observer-host, .os-host-overflow>.os-padding {
-    overflow: visible !important;
+    overflow: hidden !important;
 }
 .spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints, .main-navBar-navBar, .main-rootlist-rootlistPlaylistsScrollNode, .main-createPlaylistButton-button {
     padding-top: 0px;
