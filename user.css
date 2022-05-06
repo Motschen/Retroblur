@@ -1,4 +1,5 @@
 :root {
+  --sidebar-y-offset: 10px;
   --border-radius-1: 10px;
   --border-radius-2: 8px;
   --border-radius-3: 4px;
@@ -26,6 +27,15 @@ body {
     margin-left:15.5px;
     border-radius: 15%;
 }
+.n87ifzfQlmGX8vkeYGDL {
+    visibility: hidden;
+}
+.hW9km7ku6_iggdWDR_Lg {
+    --lyrics-color-background: transparent !important;
+    --lyrics-color-active: var(--spice-text) !important;
+    --lyrics-color-inactive: var(--spice-subtext) !important;
+    --lyrics-color-messaging: var(--spice-subtext) !important;
+}
 .lEsg6gi7HowFgzWl_634 {
     --lyrics-color-background: rgba(30, 30, 30, 0.4) !important;
 }
@@ -40,7 +50,7 @@ body {
     overflow: hidden !important;
 }
 .spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints, .main-navBar-navBar, .main-rootlist-rootlistPlaylistsScrollNode, .main-createPlaylistButton-button {
-    padding-top: 0px;
+    padding-top: var(--sidebar-y-offset);
 }
 .Root__now-playing-bar {
     backdrop-filter: blur(14px) !important;
@@ -307,7 +317,7 @@ button.switch {
   margin-top: 0;
 }
 /* tracklist */
- .main-trackList-trackList .main-virtualScrollList-wrapper, .main-trackList-trackList .main-rootlist-wrapper, .main-trackList-trackList .vB_gmMwzmB3GcEliiiys {
+ .main-trackList-trackList .main-virtualScrollList-wrapper, .main-trackList-trackList .main-rootlist-wrapper, .main-trackList-trackList .vB_gmMwzmB3GcEliiiys, .main-trackList-trackList .JUa6JJNj7R_Y3i4P8YUX {
   background-color: rgba(30, 30, 30, 0.4);
   border-radius: var(--border-radius-1) var(--border-radius-1) 0 0;
   padding: 8px;
@@ -499,21 +509,11 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 .main-buddyFeed-artistAndTrackName a, .main-buddyFeed-activityMetadata, .main-buddyFeed-playbackContextLink {
   color: var(--spice-subtext) !important;
 }
-.main-buddyFeed-friendActivity {
+.main-buddyFeed-friendActivity, .ythYrlFSBm1P_ltHc8e1 {
   background-color: rgba(30, 30, 30, 0.4) !important;
+
   backdrop-filter: blur(14px) !important;
   border-radius: var(--border-radius-1);
-  margin: 8px;
-  padding: 8px 8px 8px 12px;
-}
-.main-buddyFeed-addFriendsContainer {
-  background-color: transparent;
-}
-.main-buddyFeed-buddyFeedRoot, .main-buddyFeed-buddyFeed {
-  width: 280px;
-}
-.main-buddyFeed-activityMetadata {
-  max-width: 190px;
 }
 /* settings */
 .main-dropDown-dropDown, option {
