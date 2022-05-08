@@ -22,6 +22,10 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+.main-repeatButton-button, .main-shuffleButton-button {
+  color: var(--spice-subtext);
+  opacity: 70%;
+}
 .encore-dark-theme {
   --background-base: var(--spice-button);
 }
@@ -61,18 +65,18 @@ body {
 }
 .Root__now-playing-bar {
     backdrop-filter: blur(14px) !important;
-    background-color: rgba(30, 30, 30, 0.8) !important;
+    background-color: rgba(30, 30, 30, 0.6) !important;
 }
 @keyframes fadingGlow {
   from {} to { filter: drop-shadow(0 0 6px var(--spice-button)); }
 }
 @keyframes fadingGlowWhite {
-  from {} to { filter: drop-shadow(0 0 6px var(--spice-text)); }
+  from {} to { filter: drop-shadow(0 0 6px); }
 }
-.gSLhUO:hover, .main-playButton-PlayButton.main-playButton-primary:hover, .main-pageErrorTemplate-errorButton:hover, div.GlueDropTarget.personal-library >*.active:hover, .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive:hover, .main-navBar-navBarLinkActive:hover, .gHYQaG:hover, .iaAUvZ:hover {
+.gSLhUO:hover, .main-playButton-PlayButton.main-playButton-primary:hover, .main-pageErrorTemplate-errorButton:hover, div.GlueDropTarget.personal-library >*.active:hover, .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive:hover, .main-navBar-navBarLinkActive:hover, .control-button-heart:hover, .gHYQaG:hover, .iaAUvZ:hover {
     animation: fadingGlow 1s ease 0.5 forwards !important;
 }
-a:hover, .control-button-heart:hover, .main-trackList-rowPlayPauseButton:hover {
+a:hover, .main-trackList-rowPlayPauseButton:hover {
     animation: fadingGlowWhite 1s ease 0.5 forwards;
 }
 @keyframes speaker {
@@ -85,12 +89,10 @@ a:hover, .control-button-heart:hover, .main-trackList-rowPlayPauseButton:hover {
   1% { visibility: hidden }
   51% { visibility: hidden }
 }
-#spicetify-show-list > div:nth-child(8) > a > div.main-rootlist-statusIcons > button > svg > path:nth-child(1),
-#spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button > svg > path:nth-child(1) {
+#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button > svg > path:nth-child(1) {
     animation: speaker 2s steps(2,start) infinite;
 }
-#spicetify-show-list > div:nth-child(8) > a > div.main-rootlist-statusIcons > button > svg > path:nth-child(2),
-#spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button > svg > path:nth-child(2) {
+#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button > svg > path:nth-child(2) {
     animation: speaker2 2s steps(2,start) infinite;
 }
 .main-rootlist-statusIcons > button:hover {
