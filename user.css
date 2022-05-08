@@ -22,6 +22,13 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+.encore-dark-theme {
+  --background-base: var(--spice-button);
+}
+.gHYQaG, .iaAUvZ {
+  /*Fix playlist play button when downloaded from Spicetify Marketplace*/
+  background-color: var(--spice-button) !important;
+}
 .playlist-item__img {
     margin-right: 5px;
     margin-left:15.5px;
@@ -54,6 +61,7 @@ body {
 }
 .Root__now-playing-bar {
     backdrop-filter: blur(14px) !important;
+    background-color: rgba(30, 30, 30, 0.8) !important;
 }
 @keyframes fadingGlow {
   from {} to { filter: drop-shadow(0 0 6px var(--spice-button)); }
@@ -61,7 +69,7 @@ body {
 @keyframes fadingGlowWhite {
   from {} to { filter: drop-shadow(0 0 6px var(--spice-text)); }
 }
-.gSLhUO:hover, .main-playButton-PlayButton.main-playButton-primary:hover, .main-pageErrorTemplate-errorButton:hover, div.GlueDropTarget.personal-library >*.active:hover, .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive:hover, .main-navBar-navBarLinkActive:hover {
+.gSLhUO:hover, .main-playButton-PlayButton.main-playButton-primary:hover, .main-pageErrorTemplate-errorButton:hover, div.GlueDropTarget.personal-library >*.active:hover, .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive:hover, .main-navBar-navBarLinkActive:hover, .gHYQaG:hover, .iaAUvZ:hover {
     animation: fadingGlow 1s ease 0.5 forwards !important;
 }
 a:hover, .control-button-heart:hover, .main-trackList-rowPlayPauseButton:hover {
@@ -200,10 +208,10 @@ div.GlueDropTarget.personal-library {
 }
 /* buttons */
 .main-playButton-PlayButton.main-playButton-primary, .main-pageErrorTemplate-errorButton {
-  color: var(--spice-shadow);
+  color: var(--spice-shadow) !important;
 }
 .main-skipBackButton-button, .main-skipForwardButton-button, .control-button {
-  color: var(--spice-button);
+  color: var(--spice-button) !important;
 }
 button.switch {
   background-color: transparent !important;
