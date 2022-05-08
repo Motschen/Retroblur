@@ -50,9 +50,8 @@ body {
 .lEsg6gi7HowFgzWl_634 {
     --lyrics-color-background: rgba(30, 30, 30, 0.4) !important;
 }
-.main-connectBar-connectBar {
-    opacity: 50%;
-    filter: drop-shadow(0 0 6px var(--spice-button)) !important;
+.main-connectBar-connectBar, .iUSAh1wdhXLk9hHSbkCA.hsrxlVHxK0zZrgarkxuA:after {
+    filter: drop-shadow(0 0 6px var(--spice-button)) brightness(50%) !important;
 }
 .yaVzc4bseRnztmfRv_u3, .volume-bar .progress-bar__slider {
     filter: drop-shadow(0 0 6px var(--spice-button)) !important;
