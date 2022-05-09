@@ -26,6 +26,9 @@ body {
   color: var(--spice-subtext);
   opacity: 70%;
 }
+.X1lXSiVj0pzhQCUo_72A, .X1lXSiVj0pzhQCUo_72A:hover {
+  color: var(--spice-button);
+}
 .encore-dark-theme {
   --background-base: var(--spice-button);
 }
@@ -37,6 +40,12 @@ body {
     margin-right: 5px;
     margin-left:15.5px;
     border-radius: 15%;
+}
+.eSMjmiD29Ox35O95waw6:after, .eSMjmiD29Ox35O95waw6:before {
+  background: transparent !important;
+}
+.McwcCfBLSuXa5UDU1IMw {
+    display: none;
 }
 .n87ifzfQlmGX8vkeYGDL {
     visibility: hidden;
@@ -75,7 +84,7 @@ body {
 .gSLhUO:hover, .main-playButton-PlayButton.main-playButton-primary:hover, .main-pageErrorTemplate-errorButton:hover, div.GlueDropTarget.personal-library >*.active:hover, .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive:hover, .main-navBar-navBarLinkActive:hover, .control-button-heart:hover, .gHYQaG:hover, .iaAUvZ:hover {
     animation: fadingGlow 1s ease 0.5 forwards !important;
 }
-a:hover, .main-trackList-rowPlayPauseButton:hover {
+a:hover, .main-trackList-rowPlayPauseButton:hover, svg:hover {
     animation: fadingGlowWhite 1s ease 0.5 forwards;
 }
 @keyframes speaker {
