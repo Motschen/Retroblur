@@ -36,11 +36,6 @@ body {
   /*Fix playlist play button when downloaded from Spicetify Marketplace*/
   background-color: var(--spice-button) !important;
 }
-.playlist-item__img {
-    margin-right: 5px;
-    margin-left:15.5px;
-    border-radius: 15%;
-}
 .eSMjmiD29Ox35O95waw6:after, .eSMjmiD29Ox35O95waw6:before {
   background: transparent !important;
 }
