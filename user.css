@@ -30,7 +30,7 @@ body {
   color: var(--spice-button);
 }
 .encore-dark-theme {
-  --background-base: var(--spice-button);
+  --background-base: var(--spice-main);
 }
 .gHYQaG, .iaAUvZ {
   /*Fix playlist play button when downloaded from Spicetify Marketplace*/
