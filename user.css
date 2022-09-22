@@ -22,6 +22,9 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+.main-navBar-entryPoints {
+  margin-top: 20px;
+}
 .main-repeatButton-button, .main-shuffleButton-button {
   color: var(--spice-subtext);
   opacity: 70%;
