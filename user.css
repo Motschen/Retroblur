@@ -22,6 +22,58 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+/* Playing track's title in playlist */
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle, .main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker {
+  color: green;
+}
+.main-trackList-trackListRow.main-trackList-active:hover .main-trackList-rowTitle {
+  color: lime;
+}
+
+/* Explicit content white */
+.main-tag-container {
+  color: white;
+}
+
+/* Disable upgrade button */
+.main-topBar-UpgradeButton {
+  display: none;
+}
+
+/* Fix the navbar icons not showing when selected */
+.home-active-icon, .search-active-icon, .collection-active-icon {
+  color: white;
+  fill: white;
+}
+
+/* Make the friend list transparent and blured */
+.main-buddyFeed-buddyFeedRoot {
+  background-color: rgba(30, 30, 30, 0.4);
+  backdrop-filter: blur(14px) !important;
+}
+
+/* Added style to the native spotify's lyrics screen */
+.lyrics-lyrics-background {
+  background-color: rgba(30, 30, 30, 0.4)
+}
+.lyrics-lyrics-contentContainer {
+  --lyrics-color-active: #ffde00 !important;
+  --lyrics-color-inactive: #D56F80 !important;
+  --lyrics-color-background: #1e1e1e !important;
+  backdrop-filter: blur(14px) !important;
+}
+
+/* Fixed elapsed time overlaping with the mic button */
+.playback-bar__progress-time, .playback-bar__progress-time-elapsed, .main-playbackBarRemainingTime-container {
+  right: 265px;
+}
+
+/* Make the selected track in playlist more readable */
+div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div, div[aria-selected="true"]:hover > div > div.main-trackList-rowSectionStart > div > div {
+  color: #ffde00 !important;
+}
+
+/* Fixed navbar overlaping on top Spotify's menu in Windows */
 .main-navBar-entryPoints {
   margin-top: 20px;
 }
