@@ -11,14 +11,9 @@
   --spice-bg: "https://i.imgur.com/Y36v2Bm.jpg";
 }
 /* Set the wallpaper to the one matching your color scheme
- Source: https://wallpapercave.com/wp/wp5003466.jpg
- Purple: https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true
- Red: https://github.com/Motschen/Retroblur/blob/main/assets/background_red.jpg?raw=true
- Green: https://github.com/Motschen/Retroblur/blob/main/assets/background_green.jpg?raw=true
- Yellow: https://github.com/Motschen/Retroblur/blob/main/assets/background_yellow.jpg?raw=true
- Blue: https://github.com/Motschen/Retroblur/blob/main/assets/background_blue.jpg?raw=true */
+ Source: https://wallpapercave.com/wp/wp5003466.jpg */
 body {
-    background-image: url("https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true") !important;
+    background-image: url(" https://wallpapercave.com/wp/wp5003466.jpg") !important;
     background-repeat: no-repeat;
     background-size: 100%;
 }
