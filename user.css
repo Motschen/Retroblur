@@ -8,15 +8,19 @@
   --spice-main: transparent;
   --spice-misc: rgba(30, 30, 30, 0.8);
   --spice-player: rgba(30, 30, 30, 0.4);
-  --spice-bg: "https://i.imgur.com/Y36v2Bm.jpg";
+  --bg: url(--spice-wallpaper);
 }
-/* Set the wallpaper to the one matching your color scheme
+/*
+ Set the wallpaper to the one matching your color scheme
  Source: https://wallpapercave.com/wp/wp5003466.jpg
  Purple: https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true
  Red: https://github.com/Motschen/Retroblur/blob/main/assets/background_red.jpg?raw=true
  Green: https://github.com/Motschen/Retroblur/blob/main/assets/background_green.jpg?raw=true
  Yellow: https://github.com/Motschen/Retroblur/blob/main/assets/background_yellow.jpg?raw=true
- Blue: https://github.com/Motschen/Retroblur/blob/main/assets/background_blue.jpg?raw=true */
+ Blue: https://github.com/Motschen/Retroblur/blob/main/assets/background_blue.jpg?raw=true
+ Beach (Blue): https://wallpapercave.com/wp/wp5922621.jpg
+ Forest (Green): https://i.imgur.com/hnpaDeR.jpg
+ */
 body {
     background-image: url("https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true") !important;
     background-repeat: no-repeat;
@@ -24,15 +28,15 @@ body {
 }
 /* Playing track's title in playlist */
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle, .main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker {
-  color: green;
+  color: var(--spice-subtext);
 }
 .main-trackList-trackListRow.main-trackList-active:hover .main-trackList-rowTitle {
-  color: lime;
+  color: var(--spice-button);
 }
 
-/* Explicit content white */
+/* Explicit content black */
 .main-tag-container {
-  color: white;
+  color: black;
 }
 
 /* Disable upgrade button */
@@ -63,14 +67,14 @@ body {
   backdrop-filter: blur(14px) !important;
 }
 
-/* Fixed elapsed time overlaping with the mic button */
+/* Fixed elapsed time overlapping with the mic button */
 .playback-bar__progress-time, .playback-bar__progress-time-elapsed, .main-playbackBarRemainingTime-container {
   right: 265px;
 }
 
 /* Make the selected track in playlist more readable */
 div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div, div[aria-selected="true"]:hover > div > div.main-trackList-rowSectionStart > div > div {
-  color: #ffde00 !important;
+  color: var(--spice-text) !important;
 }
 
 /* Fixed navbar overlaping on top Spotify's menu in Windows */
@@ -91,6 +95,10 @@ div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div
   /*Fix playlist play button when downloaded from Spicetify Marketplace*/
   background-color: var(--spice-button) !important;
 }
+.iaAUvZ {
+  transform: translate3d(9px, 0px, 0px);
+  min-inline-size: auto;
+}
 .eSMjmiD29Ox35O95waw6:after, .eSMjmiD29Ox35O95waw6:before {
   background: transparent !important;
 }
@@ -109,8 +117,22 @@ div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div
 .lEsg6gi7HowFgzWl_634 {
     --lyrics-color-background: rgba(30, 30, 30, 0.4) !important;
 }
+.main-connectBar-connectBar {
+    border-radius: 8px;
+    height: 28px;
+    padding: 8px !important;
+    position: absolute;
+    right: 16px;
+    bottom: 106px;
+}
 .main-connectBar-connectBar, .iUSAh1wdhXLk9hHSbkCA.hsrxlVHxK0zZrgarkxuA:after {
     filter: drop-shadow(0 0 6px var(--spice-button)) brightness(50%) !important;
+    color: black;
+    opacity: 95%;
+}
+.iUSAh1wdhXLk9hHSbkCA.hsrxlVHxK0zZrgarkxuA:after {
+    transform: scaleY(-1);
+    bottom: 67px;
 }
 .yaVzc4bseRnztmfRv_u3, .volume-bar .progress-bar__slider {
     filter: drop-shadow(0 0 6px var(--spice-button)) !important;
@@ -147,10 +169,10 @@ a:hover, .main-trackList-rowPlayPauseButton:hover, svg:hover {
   1% { visibility: hidden }
   51% { visibility: hidden }
 }
-#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button > svg > path:nth-child(1) {
+#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button > svg > path:nth-child(1), #spicetify-sticky-list > div:nth-child(7) > a > div.main-rootlist-statusIcons > button > svg > path:nth-child(1), #spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button > svg > path:nth-child(1) {
     animation: speaker 2s steps(2,start) infinite;
 }
-#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button > svg > path:nth-child(2) {
+#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button > svg > path:nth-child(2), #spicetify-sticky-list > div:nth-child(7) > a > div.main-rootlist-statusIcons > button > svg > path:nth-child(2), #spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button > svg > path:nth-child(2) {
     animation: speaker2 2s steps(2,start) infinite;
 }
 .main-rootlist-statusIcons > button:hover {
@@ -187,10 +209,6 @@ div.GlueDropTarget.personal-library {
 .os-scrollbar-handle {
   border-radius: 50px;
   background: var(--spice-button-disabled) !important;
-}
-/* remove shadows */
-* {
-  box-shadow: none !important;
 }
 /* remove gradients */
 .main-home-homeHeader, .main-actionBarBackground-background, .We1fExPHxLIRmV0rZGNo {
@@ -367,7 +385,10 @@ button.switch {
 }
 .ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss, .main-collectionLinkButton-selected, .main-collectionLinkButton-collectionLinkButton.active {
   background: var(--spice-selected-row) !important;
-  color: var(--spice-shadow);
+  color: var(--spice-shadow) !important;
+}
+div.GlueDropTarget.personal-library >*.active > div.main-rootlist-statusIcons > button {
+  color: var(--spice-shadow) !important;
 }
 .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper, .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper:hover, .VBBDTqhWgM6gWFAMJSUV, .VBBDTqhWgM6gWFAMJSUV:hover {
   color: var(--spice-shadow) !important;
@@ -526,10 +547,10 @@ a[class*='-tabBar-headerItemLink']:active {
   backdrop-filter: blur(14px) !important;
   border-radius: var(--border-radius-1);
 }
-/* error */
+/* error
 path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298 23-23C46 10.297 35.703 0 23 0zm0 44C11.421 44 2 34.579 2 23S11.42 2 23 2c11.579 0 21 9.42 21 21 0 11.579-9.42 21-21 21zm1.872-32.065l-.8 16.192h-2.144l-.832-16.192h3.776zm-3.968 20.768c0-.576.203-1.072.608-1.488a1.979 1.979 0 011.472-.624c.576 0 1.072.208 1.488.624.416.416.624.912.624 1.488s-.208 1.067-.624 1.472a2.056 2.056 0 01-1.488.608 2.006 2.006 0 01-1.472-.608 2.002 2.002 0 01-.608-1.472z"], .spoticon-warning-64::before {
   color: var(--spice-notification-error);
-}
+} */
 /* modals */
 .main-trackCreditsModal-container, .main-aboutRecsModal-container, .main-playlistEditDetailsModal-container, .profile-userEditDetails-container, .artist-artistAbout-modal {
 
@@ -558,6 +579,10 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
   color: var(--spice-text);
 }
 /* dialogs */
+.button-module__button___hf2qg_marketplace {
+  background-color: var(--spice-button);
+  color: var(--spice-shadow);
+}
 .main-deletePlaylistDialog-container, .main-deleteFolderDialog-container {
   background-color: rgba(30, 30, 30, 0.4) !important;
   backdrop-filter: blur(14px) !important;
@@ -654,7 +679,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   margin-right: 30px;
 }
 .playback-bar__progress-time-elapsed {
-    margin-right: 43px;
+  margin-right: 43px;
 }
 .playback-bar__progress-time:first-child::after, .playback-bar__progress-time-elapsed::after {
   content: " /";
@@ -700,9 +725,6 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   bottom: 83px;
   position: absolute;
 }
-.now-playing-bar-container>div:first-child:nth-last-child(2) .playback-bar, .main-nowPlayingBar-container>div:first-child:nth-last-child(2) .playback-bar {
-  bottom: 107px;
-}
 .playback-bar .progress-bar__bg, .playback-bar .progress-bar__fg_wrapper, .playback-bar .progress-bar__fg {
   border-radius: 0;
   height: 6px;
@@ -732,6 +754,9 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 }
 .npv-progress-bar__rail {
   height: 6px;
+}
+#main > div > div:nth-child(4) > div > div.spotifyinternal-artistnpv.npv-has-progress-bar.npv-has-animations-and-transitions > div.npv-main-container > div.ylcmjHXKpwmez5_bBVgt > div > div.playback-bar {
+  bottom: 100px;
 }
 /* Lyrics */
 .lyrics-lyricsContainer-SyncedLyrics .lyrics-lyricsContainer-LyricsLine.lyrics-lyricsContainer-LyricsLine-active {
