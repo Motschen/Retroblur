@@ -26,6 +26,10 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+/* Fixed navbar overlaping on top Spotify's menu in Windows */
+.main-navBar-entryPoints {
+  margin-top: 20px;
+}
 /* Playing track's title in playlist */
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle, .main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker {
   color: var(--spice-subtext);
@@ -77,10 +81,6 @@ div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div
   color: var(--spice-text) !important;
 }
 
-/* Fixed navbar overlaping on top Spotify's menu in Windows */
-.main-navBar-entryPoints {
-  margin-top: 20px;
-}
 .main-repeatButton-button, .main-shuffleButton-button {
   color: var(--spice-subtext);
   opacity: 70%;
@@ -126,9 +126,9 @@ div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div
     bottom: 106px;
 }
 .main-connectBar-connectBar, .iUSAh1wdhXLk9hHSbkCA.hsrxlVHxK0zZrgarkxuA:after {
-    filter: drop-shadow(0 0 6px var(--spice-button)) brightness(50%) !important;
+    filter: drop-shadow(0 0 6px var(--spice-button)) !important;
     color: black;
-    opacity: 95%;
+    opacity: 90%;
 }
 .iUSAh1wdhXLk9hHSbkCA.hsrxlVHxK0zZrgarkxuA:after {
     transform: scaleY(-1);
@@ -752,9 +752,6 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .npv-up-next {
   border: none !important;
 }
-.npv-progress-bar__rail {
-  height: 6px;
-}
 #main > div > div:nth-child(4) > div > div.spotifyinternal-artistnpv.npv-has-progress-bar.npv-has-animations-and-transitions > div.npv-main-container > div.ylcmjHXKpwmez5_bBVgt > div > div.playback-bar {
   bottom: 100px;
 }
@@ -834,4 +831,12 @@ CANVAS!!!
   border-top-width: 0;
   border-bottom-width: 0;
   box-shadow: 1px 0px 20px 20px #00000055;
+}
+
+
+.main-rootlist-rootlist {
+  margin-top: -20px;
+}
+#spicetify-sticky-list > div.GlueDropTarget.GlueDropTarget--albums.GlueDropTarget--tracks.GlueDropTarget--local-tracks.GlueDropTarget--episodes.personal-library {
+  margin-top: -15px;
 }
