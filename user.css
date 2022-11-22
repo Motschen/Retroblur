@@ -426,7 +426,8 @@ div.GlueDropTarget.personal-library >*.active > div.main-rootlist-statusIcons > 
   background-color: rgba(var(--spice-rgb-selected-row),.1);
 }
 .main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover {
-  background-color: var(--spice-selected-row);
+  background-color: rgba(var(--spice-rgb-selected-row),.5);
+  filter: drop-shadow(0 0 14px rgba(var(--spice-rgb-selected-row),.7)) !important;
 }
 .main-trackList-trackListRow.main-trackList-selected .main-tag-container, .main-trackList-trackListRow.main-trackList-selected:hover .main-tag-container, .main-trackList-trackListRow.main-trackList-selected:active .main-tag-container, .main-trackList-trackListRow.main-trackList-selected:focus .main-tag-container {
   color: var(--spice-selected-row) !important;
@@ -833,6 +834,9 @@ CANVAS!!!
   box-shadow: 1px 0px 20px 20px #00000055;
 }
 
+.main-trackList-trackListRow.main-trackList-selected > .main-trackList-rowSectionVariable.starRatings >* path {
+  filter: saturate(130%);
+}
 
 .main-rootlist-rootlist {
   margin-top: -20px;
