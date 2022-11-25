@@ -163,16 +163,28 @@ a:hover, .main-trackList-rowPlayPauseButton:hover, svg:hover {
   0% { clip-path: inset(0% 50% 0% 0%) }
   50% { clip-path: inset(0% 0% 0% 0%) }
   51% { clip-path: inset(0% 0% 0% 0%) }
+  84% { clip-path: inset(0% 0% 0% 0%) }
+  85% { clip-path: inset(0% 25% 0% 0%) }
+  100% { clip-path: inset(0% 25% 0% 0%) }
 }
 @keyframes speaker2 {
   0% { visibility: visible }
   1% { visibility: hidden }
   51% { visibility: hidden }
 }
-#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button > svg > path:nth-child(1), #spicetify-sticky-list > div:nth-child(7) > a > div.main-rootlist-statusIcons > button > svg > path:nth-child(1), #spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button > svg > path:nth-child(1) {
+#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button:hover > svg > path:nth-child(1),
+#spicetify-sticky-list > div:nth-child(7) > a > div.main-rootlist-statusIcons > button:hover > svg > path:nth-child(1),
+#spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button:hover > svg > path:nth-child(1) {
+    animation: initial;
+}
+#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button > svg > path:nth-child(1),
+#spicetify-sticky-list > div:nth-child(7) > a > div.main-rootlist-statusIcons > button > svg > path:nth-child(1),
+#spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button > svg > path:nth-child(1) {
     animation: speaker 2s steps(2,start) infinite;
 }
-#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button > svg > path:nth-child(2), #spicetify-sticky-list > div:nth-child(7) > a > div.main-rootlist-statusIcons > button > svg > path:nth-child(2), #spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button > svg > path:nth-child(2) {
+#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.LKgm9fCDTO7wqig_5U1q > div > div:nth-child(2) > a > div.gtuJjD43VjwtP8ii3H3P > button > svg > path:nth-child(2),
+#spicetify-sticky-list > div:nth-child(7) > a > div.main-rootlist-statusIcons > button > svg > path:nth-child(2),
+#spicetify-playlist-list > div > div:nth-child(2) > li:nth-child(1) > div > div > button > svg > path:nth-child(2) {
     animation: speaker2 2s steps(2,start) infinite;
 }
 .main-rootlist-statusIcons > button:hover {
