@@ -796,6 +796,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
     moveY 4.4s linear 0s infinite alternate-reverse;
 }
 .lyrics-lyricsContainer-LyricsBackground {
+    visibility:hidden;
     opacity: 0.5 !important;
 }
 /* Change text of the container
