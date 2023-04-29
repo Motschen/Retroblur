@@ -1,34 +1,53 @@
 :root {
-  --sidebar-y-offset: 10px;
+  --sidebar-y-offset: 0px;
   --border-radius-1: 10px;
   --border-radius-2: 8px;
   --border-radius-3: 4px;
   --scrollbars: unset;
-  --green: #1db954;
   --spice-main: transparent;
   --spice-misc: rgba(30, 30, 30, 0.8);
-  --spice-player: rgba(30, 30, 30, 0.4);
-  --bg: url(--spice-wallpaper);
+  --spice-player: rgba(30, 30, 30, 0.5);
 }
 /*
- Set the wallpaper to the one matching your color scheme
- Source: https://wallpapercave.com/wp/wp5003466.jpg
- Purple: https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true
- Red: https://github.com/Motschen/Retroblur/blob/main/assets/background_red.jpg?raw=true
- Green: https://github.com/Motschen/Retroblur/blob/main/assets/background_green.jpg?raw=true
- Yellow: https://github.com/Motschen/Retroblur/blob/main/assets/background_yellow.jpg?raw=true
- Blue: https://github.com/Motschen/Retroblur/blob/main/assets/background_blue.jpg?raw=true
- Beach (Blue): https://wallpapercave.com/wp/wp5922621.jpg
- Forest (Green): https://i.imgur.com/hnpaDeR.jpg
+ Set the wallpaper to one matching your color scheme
+ -> Here are some cartoon wallpapers that suit their theme well:
+ Bridge (Dream): https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true
+ Bridge (Mercy): https://github.com/Motschen/Retroblur/blob/main/assets/background_red.jpg?raw=true
+ Bridge (Summer): https://github.com/Motschen/Retroblur/blob/main/assets/background_green.jpg?raw=true
+ Bridge (Sun): https://github.com/Motschen/Retroblur/blob/main/assets/background_yellow.jpg?raw=true
+ Bridge (Water: https://github.com/Motschen/Retroblur/blob/main/assets/background_blue.jpg?raw=true
+    Bridge Wallpaper Source: https://wallpapercave.com/wp/wp5003466.jpg
+ Forest (Summer): https://i.imgur.com/hnpaDeR.jpg
+
+ -> Here are some real life wallpapers that suit their theme well:
+ Beach (Sun): https://wallpapercave.com/wp/wp5922621.jpg
+ Lamborghini (Mercy): https://i.etsystatic.com/26226621/r/il/acca86/4880827253/il_794xN.4880827253_4ig6.jpg
+    Source: https://www.etsy.com/de/listing/1464786817/lamborghini-digitale-kunst
+ Rose (Mercy): https://4kwallpapers.com/images/walls/thumbs_3t/10670.jpg
+    Source: https://4kwallpapers.com/flowers/red-flower-red-rose-10670.html
+ Evening Clouds (Sunset): https://4kwallpapers.com/images/walls/thumbs_3t/4928.jpg
+    Source: https://4kwallpapers.com/nature/sunset-mountain-range-silhouette-landscape-orange-sky-4928.html
+ Waterfalls (Summer): https://images3.alphacoders.com/356/35627.jpg
+    Source: https://wall.alphacoders.com/big.php?i=35627
+ Surfing (Sun): https://images.unsplash.com/photo-1516370873344-fb7c61054fa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+    Source: https://unsplash.com/de/fotos/xarhNpLSHTk
+ Surfing (Water): https://images.unsplash.com/photo-1502933691298-84fc14542831?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+    Source: https://unsplash.com/de/fotos/TII6axq3eo4
  */
 body {
+    /* Set the wallpaper link below */
+    /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
     background-image: url("https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true") !important;
+    /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
     background-repeat: no-repeat;
     background-size: 100%;
 }
-/* Fixed navbar overlaping on top Spotify's menu in Windows */
-.main-navBar-entryPoints {
-  margin-top: 20px;
+/* Fixed navbar overlapping on top Spotify's menu in Windows */
+.spotify__os--is-linux.spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints {
+  padding-top: var(--sidebar-y-offset);
+}
+.spotify__os--is-linux.spotify__container--is-desktop:not(.fullscreen) .main-navBar-navBar {
+  padding-top: 10px;
 }
 /* Playing track's title in playlist */
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle, .main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker {
@@ -37,21 +56,33 @@ body {
 .main-trackList-trackListRow.main-trackList-active:hover .main-trackList-rowTitle {
   color: var(--spice-button);
 }
+/* Fixes blur looking weird on home page shortcuts */
+.view-homeShortcutsGrid-shortcut .view-homeShortcutsGrid-imageContainer > div > img {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
 
 /* Explicit content black */
 .main-tag-container {
   color: black;
+  background-color: var(--spice-text);
 }
 
 /* Disable upgrade button */
 .main-topBar-UpgradeButton {
   display: none;
 }
+.search-icon {
+  color: var(--spice-text);
+}
+.main-topBar-historyButtons .main-topBar-button {
+  margin-right: 5px;
+}
 
 /* Fix the navbar icons not showing when selected */
 .home-active-icon, .search-active-icon, .collection-active-icon {
-  color: white;
-  fill: white;
+  color: black;
+  fill: black;
 }
 
 /* Make the friend list transparent and blured */
@@ -140,9 +171,6 @@ div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div
 .main-view-container, .Root__main-view, .os-host-overflow, .os-resize-observer, .os-resize-observer-host, .os-host-overflow>.os-padding {
     overflow: hidden !important;
 }
-.spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints, .main-navBar-navBar, .main-rootlist-rootlistPlaylistsScrollNode, .main-createPlaylistButton-button {
-    padding-top: var(--sidebar-y-offset);
-}
 .Root__now-playing-bar {
     backdrop-filter: blur(14px) !important;
     background-color: rgba(30, 30, 30, 0.6) !important;
@@ -153,7 +181,9 @@ div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div
 @keyframes fadingGlowWhite {
   from {} to { filter: drop-shadow(0 0 6px); }
 }
-.gSLhUO:hover, .main-playButton-PlayButton.main-playButton-primary:hover, .main-pageErrorTemplate-errorButton:hover, div.GlueDropTarget.personal-library >*.active:hover, .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive:hover, .main-navBar-navBarLinkActive:hover, .control-button-heart:hover, .gHYQaG:hover, .iaAUvZ:hover {
+.gSLhUO:hover, .main-playButton-PlayButton.main-playButton-primary:hover, .main-pageErrorTemplate-errorButton:hover, 
+.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive:hover, .main-navBar-navBarLinkActive:hover, 
+.control-button-heart:hover, .gHYQaG:hover, .iaAUvZ:hover {
     animation: fadingGlow 1s ease 0.5 forwards !important;
 }
 a:hover, .main-trackList-rowPlayPauseButton:hover, svg:hover {
@@ -202,6 +232,7 @@ div.GlueDropTarget.personal-library {
 .playback-bar .progress-bar__slider {
     filter: drop-shadow(0 0 6px var(--spice-button));
 }
+/* Shows a reflection of the big cover image */
 .main-coverSlotExpanded-container {
     -webkit-box-reflect: below;
 }
@@ -235,8 +266,9 @@ div.GlueDropTarget.personal-library {
 .main-entityHeader-backgroundColor {
   background: transparent;
 }
-/* remove dividers */
+/* Remove dividers at playlist top & style header */
 .main-trackList-trackListHeaderRow, .main-trackCreditsModal-header {
+  border-radius: 5px;
   border-bottom: none;
   background-color: rgba(30, 30, 30, 0.4) !important;
   backdrop-filter: blur(14px) !important;
@@ -395,10 +427,6 @@ button.switch {
 .main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLinkActive:hover, .VBBDTqhWgM6gWFAMJSUV, .VBBDTqhWgM6gWFAMJSUV:hover {
   background-color: var(--spice-selected-row);
 }
-.ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss, .main-collectionLinkButton-selected, .main-collectionLinkButton-collectionLinkButton.active {
-  background: var(--spice-selected-row) !important;
-  color: var(--spice-shadow) !important;
-}
 div.GlueDropTarget.personal-library >*.active > div.main-rootlist-statusIcons > button {
   color: var(--spice-shadow) !important;
 }
@@ -465,7 +493,7 @@ div.GlueDropTarget.personal-library >*.active > div.main-rootlist-statusIcons > 
   border-bottom: none;
 }
 .main-trackList-statusChangeUp {
-  color: var(--green);
+  color: #1db954;
 }
 /* big thanks to CharlieS and harbassan for providing the svg */
 .main-trackList-playingIcon {
@@ -684,7 +712,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .playback-bar__progress-time, .playback-bar__progress-time-elapsed, .main-playbackBarRemainingTime-container {
   position: absolute;
   bottom: -48px;
-  right: 250px;
+  right: 270px;
   color: var(--spice-text) !important;
   filter: drop-shadow(0 0 6px var(--spice-text)) !important;
 }
@@ -856,4 +884,104 @@ CANVAS!!!
 }
 #spicetify-sticky-list > div.GlueDropTarget.GlueDropTarget--albums.GlueDropTarget--tracks.GlueDropTarget--local-tracks.GlueDropTarget--episodes.personal-library {
   margin-top: -15px;
+}
+/* Purple glow, gradient and animation for progress bar, volume bar, 
+   play button and selected sidebar items */
+@keyframes gradientFade {
+  /* Animation is done using this technique: https://stackoverflow.com/a/33938639 */
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+.playback-bar .x-progressBar-fillColor, .volume-bar .x-progressBar-fillColor {
+  background: linear-gradient(45deg, var(--spice-selected-row), 40%, var(--spice-subtext), 80%, var(--spice-selected-row));
+  background-position: 0% 100%;
+  background-size: 200% 200%;
+  animation: gradientFade 3s linear infinite alternate;
+}
+.ButtonInner-lg-iconOnly,
+.playlist-item__img.folder,
+.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLinkActive:hover, .VBBDTqhWgM6gWFAMJSUV, .VBBDTqhWgM6gWFAMJSUV:hover,
+.ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss, .main-collectionLinkButton-selected, .main-collectionLinkButton-collectionLinkButton.active,
+.main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:hover, .main-navBar-navBarLinkActive:active, .main-navBar-navBarLinkActive:focus {
+  background-image: linear-gradient(69deg, var(--spice-selected-row), 40%, var(--spice-subtext), 80%, var(--spice-selected-row)) !important;
+  background-position: 0% 100%;
+  background-size: 200% 200% !important;
+  animation: gradientFade 3s ease infinite alternate;
+}
+.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLinkActive:hover, .VBBDTqhWgM6gWFAMJSUV, .VBBDTqhWgM6gWFAMJSUV:hover,
+.ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss, .main-collectionLinkButton-selected, .main-collectionLinkButton-collectionLinkButton.active,
+.main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:hover, .main-navBar-navBarLinkActive:active, .main-navBar-navBarLinkActive:focus {
+  box-shadow: 0px 0px 3px 1px var(--spice-subtext);
+  color: black !important;
+}
+/* Darken less important buttons */
+.main-skipBackButton-button > svg > path, .main-skipForwardButton-button > svg > path, .control-button > svg > path,
+.playlist-item__img.folder {
+  filter: brightness(90%);
+}
+/* Better look for YourEpisodes & LocalFiles cards */
+.main-yourEpisodes-coverIcon, .Svg-img-textBrightAccent-64-icon {
+  color: var(--spice-text);
+  fill: var(--spice-text);
+}
+.main-yourEpisodes-coverContainer {
+  background: linear-gradient(36deg, #056952, 70%, #0caf27);
+}
+.fRZRXRIV2YBCFLYgwDAr {
+  background: linear-gradient(36deg, #202f72, 70%, #34c8d3);
+}
+/* Fix your podcasts items having no background */
+.TT1tIewS2iI8Uz8kLuQB {
+  backdrop-filter: blur(10px);
+  background: var(--spice-player);
+  border-radius: 10px;
+}
+.TT1tIewS2iI8Uz8kLuQB:hover {
+  background: var(--spice-misc);
+}
+/* Fixes marketplace readmes & settings screen having no background */
+#marketplace-readme, .x-settings-container {
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  background: var(--spice-player) !important;
+}
+#marketplace-readme a {
+  color: var(--spice-text) !important;
+}
+/* Makes context menus transparent & blurred */
+.main-contextMenu-menu {
+  background-color: var(--spice-misc);
+  backdrop-filter: blur(10px);
+}
+/* Fixes playlist icon shadow being cut off */
+.main-entityHeader-shadow {
+  -webkit-box-shadow: 0 4px 29px rgba(var(--spice-rgb-shadow),.5);
+  box-shadow: 0 4px 29px rgba(var(--spice-rgb-shadow),.5);
+}
+/* Fixes image placeholders icon line color & line width */
+.main-entityHeader-imagePlaceholder {
+  border-radius: 7px;
+  color: var(--spice-text);
+  stroke: currentcolor; 
+  stroke-width: 2px;
+}
+/* Add a gradient to the artists name in playlists & now playing */
+.main-trackList-rowSubTitle a, .main-trackInfo-artists a:link, .main-trackInfo-artists a:visited {
+  background: linear-gradient(5deg, var(--spice-selected-row), 40%, var(--spice-subtext), 80%, var(--spice-selected-row));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.main-trackList-trackListRow.main-trackList-selected .main-trackList-rowSubTitle a, .main-trackList-trackListRow.main-trackList-selected:hover .main-trackList-rowSubTitle a {
+  background: transparent;
+  -webkit-text-fill-color: white;
+}
+.Button-sm-16-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle,
+.Button-sm-16-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle, .main-shuffleButton-button.main-shuffleButton-active,
+.control-button {
+  color: var(--spice-subtext) !important;
 }
