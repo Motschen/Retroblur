@@ -1,7 +1,7 @@
 {
     "name": "Retroblur",
     "description": "Theme with a background, blur, animations, gradients and reflections.",
-    "preview": "preview/dream.png",
+    "preview": "preview/dream.jpg",
     "usercss": "user.css",
     "schemes": "color.ini",
     "readme": "README.md"

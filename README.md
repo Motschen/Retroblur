@@ -5,17 +5,17 @@ Based on https://github.com/schnensch0/ziro <br>
 Copyright © 2023 Motschen - MIT License<br>
 
 
-![Dream](preview/dream.png)
+![Dream](preview/dream.jpg)
 
-![Water](preview/water.png)
+![Water](preview/water.jpg)
 
-![Lush](preview/lush.png)
+![Lush](preview/lush.jpg)
 
-![Sun](preview/sun.png)
+![Sun](preview/sun.jpg)
 
-![Sunset](preview/sunset.png)
+![Sunset](preview/sunset.jpg)
 
-![Mercy](preview/mercy.png)
+![Mercy](preview/mercy.jpg)
 
 ![Missing Lyrics](preview/missing_lyrics.gif)
 
