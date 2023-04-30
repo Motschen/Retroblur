@@ -11,11 +11,11 @@
 /*
  Set the wallpaper to one matching your color scheme
  -> Here are some cartoon wallpapers that suit their theme well:
- Bridge (Dream): https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true
- Bridge (Mercy): https://github.com/Motschen/Retroblur/blob/main/assets/background_red.jpg?raw=true
- Bridge (Summer): https://github.com/Motschen/Retroblur/blob/main/assets/background_green.jpg?raw=true
- Bridge (Sun): https://github.com/Motschen/Retroblur/blob/main/assets/background_yellow.jpg?raw=true
- Bridge (Water: https://github.com/Motschen/Retroblur/blob/main/assets/background_blue.jpg?raw=true
+ Bridge (Dream): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_purple.jpg?raw=true
+ Bridge (Mercy): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_red.jpg?raw=true
+ Bridge (Summer): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_green.jpg?raw=true
+ Bridge (Sun): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_yellow.jpg?raw=true
+ Bridge (Water: https://github.com/Motschen/Retroblur/blob/fresh/assets/background_blue.jpg?raw=true
     Bridge Wallpaper Source: https://wallpapercave.com/wp/wp5003466.jpg
  Forest (Summer): https://i.imgur.com/hnpaDeR.jpg
 
@@ -37,7 +37,7 @@
 body {
     /* Set the wallpaper link below */
     /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
-    background-image: url("https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true") !important;
+    background-image: url("https://github.com/Motschen/Retroblur/blob/fresh/assets/background_purple.jpg?raw=true") !important;
     /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
     background-repeat: no-repeat;
     background-size: 100%;
