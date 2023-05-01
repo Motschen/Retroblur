@@ -1,8 +1,22 @@
-{
-    "name": "Retroblur",
-    "description": "Theme with a background, blur, animations, gradients and reflections.",
-    "preview": "preview/dream.jpg",
-    "usercss": "user.css",
-    "schemes": "color.ini",
-    "readme": "README.md"
-}
+[
+    {
+        "name": "Retroblur",
+        "description": "Theme with a background, blur, animations, gradients and reflections.",
+        "preview": "preview/dream.jpg",
+        "usercss": "user.css",
+        "schemes": "color.ini",
+        "include": ["https://raw.githubusercontent.com/Motschen/Retroblur/fresh/theme.js"],
+        "tags": ["retro", "blur", "animations", "gradients"],
+        "readme": "README.md"
+    },
+    {
+        "name": "Retroblur Classic",
+        "description": "Theme with a background, blur, animations and reflections.",
+        "preview": "preview/playlist.png",
+        "usercss": "user.css",
+        "schemes": "color.ini",
+        "readme": "README.md",
+        "tags": ["retro", "blur", "animations"],
+        "branch": "main"
+    }
+]

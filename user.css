@@ -13,11 +13,11 @@
  -> Here are some cartoon wallpapers that suit their theme well:
  Bridge (Dream): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_purple.jpg?raw=true
  Bridge (Mercy): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_red.jpg?raw=true
- Bridge (Summer): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_green.jpg?raw=true
+ Bridge (Lush): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_green.jpg?raw=true
  Bridge (Sun): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_yellow.jpg?raw=true
  Bridge (Water: https://github.com/Motschen/Retroblur/blob/fresh/assets/background_blue.jpg?raw=true
     Bridge Wallpaper Source: https://wallpapercave.com/wp/wp5003466.jpg
- Forest (Summer): https://i.imgur.com/hnpaDeR.jpg
+ Forest (Lush): https://i.imgur.com/hnpaDeR.jpg
 
  -> Here are some real life wallpapers that suit their theme well:
  Beach (Sun): https://wallpapercave.com/wp/wp5922621.jpg
@@ -27,7 +27,7 @@
     Source: https://4kwallpapers.com/flowers/red-flower-red-rose-10670.html
  Evening Clouds (Sunset): https://4kwallpapers.com/images/walls/thumbs_3t/4928.jpg
     Source: https://4kwallpapers.com/nature/sunset-mountain-range-silhouette-landscape-orange-sky-4928.html
- Waterfalls (Summer): https://images3.alphacoders.com/356/35627.jpg
+ Waterfalls (Lush): https://images3.alphacoders.com/356/35627.jpg
     Source: https://wall.alphacoders.com/big.php?i=35627
  Surfing (Sun): https://images.unsplash.com/photo-1516370873344-fb7c61054fa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
     Source: https://unsplash.com/de/fotos/xarhNpLSHTk
@@ -37,7 +37,7 @@
 body {
     /* Set the wallpaper link below */
     /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
-    background-image: url("https://github.com/Motschen/Retroblur/blob/fresh/assets/background_purple.jpg?raw=true") !important;
+    background-image: linear-gradient(left, #000000, #000000);
     /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
     background-repeat: no-repeat;
     background-size: 100%;
@@ -594,8 +594,9 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 } */
 /* modals */
 .main-trackCreditsModal-container, .main-aboutRecsModal-container, .main-playlistEditDetailsModal-container, .profile-userEditDetails-container, .artist-artistAbout-modal {
-
+  background-color: rgba(30, 30, 30, 0.4);
   border-radius: var(--border-radius-1) !important;
+  backdrop-filter: blur(14px);
 }
 .main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus, .playlist-inlineSearchBox-filterInput {
   background-color: rgba(30, 30, 30, 0.4) !important;
@@ -902,6 +903,7 @@ CANVAS!!!
   background-size: 200% 200%;
   animation: gradientFade 3s linear infinite alternate;
 }
+#wallpaper-save,
 .ButtonInner-lg-iconOnly,
 .playlist-item__img.folder,
 .main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLinkActive:hover, .VBBDTqhWgM6gWFAMJSUV, .VBBDTqhWgM6gWFAMJSUV:hover,
@@ -912,6 +914,7 @@ CANVAS!!!
   background-size: 200% 200% !important;
   animation: gradientFade 3s ease infinite alternate;
 }
+#wallpaper-save:hover,
 .main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLinkActive:hover, .VBBDTqhWgM6gWFAMJSUV, .VBBDTqhWgM6gWFAMJSUV:hover,
 .ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss, .main-collectionLinkButton-selected, .main-collectionLinkButton-collectionLinkButton.active,
 .main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:hover, .main-navBar-navBarLinkActive:active, .main-navBar-navBarLinkActive:focus {
@@ -984,4 +987,112 @@ CANVAS!!!
 .Button-sm-16-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle, .main-shuffleButton-button.main-shuffleButton-active,
 .control-button {
   color: var(--spice-subtext) !important;
+}
+/*
+-------------------
+HOME POPUP 
+-------------------
+*/
+#wallpaper-select {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+}
+div[aria-label="Retroblur Settings"] .main-trackCreditsModal-mainSection {
+  overflow-y: hidden;
+  padding: 24px;
+}
+.main-trackCreditsModal-container {
+  max-height: 620px;
+}
+.main-trackCreditsModal-originalCredits {
+  padding-bottom: 0;
+}
+.main-userWidget-dropDownMenu li.main-contextMenu-menuItem > div {
+  left: calc(225px + 185px) !important;
+  width: 225px;
+}
+.retroblurOptionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: initial;
+}
+button.retroblurOptionToggle {
+  display: flex;
+  background-color: transparent;
+  border: hidden;
+}
+span.toggleWrapper {
+  width: 42px;
+  height: 24px;
+  background-color: var(--spice-button);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+span.toggleWrapper:disabled {
+  background-color: gray;
+}
+span.toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: black;
+  margin-left: 2px;
+}
+span.toggle.enabled {
+  margin-left: 20px;
+}
+#src-input {
+  margin-bottom: 15px;
+}
+#wallpaper-save {
+  margin-top: 15px;
+  box-sizing: border-box;
+  font-family: var(--font-family, spotify-circular),Helvetica,Arial,sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  background-color: transparent;
+  border: 0;
+  border-radius: 500px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  transition-duration: 33ms;
+  transition-property: background-color,border-color,color,box-shadow,filter,transform;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  transform: translate3d(0,0,0);
+  padding: 0;
+  min-inline-size: 0px;
+  align-self: center;
+  position: relative;
+  border-radius: 500px;
+  font-size: inherit;
+  padding-block: 12px;
+  padding-inline: 32px;
+  color: black;
+  background-color: var(--spice-button);
+}
+/* report issue link */
+.issue-button {
+  display: initial;
+  vertical-align: -webkit-baseline-middle;
+  font-size: 0.8em;
+  width: fit-content;
+  margin-left: 210px;
+}
+#wallpaper-select > div.main-playlistEditDetailsModal-imageDropDownContainer > button > svg,
+#wallpaper-select > div.main-playlistEditDetailsModal-imageChangeButton > div > button > div {
+  fill: var(--spice-text)
+}
+#wallpaper-select > div.main-playlistEditDetailsModal-imageChangeButton > div > button {
+  border-radius: 10px;
 }
