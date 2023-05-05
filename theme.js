@@ -1,14 +1,26 @@
 /* Based on https://github.com/harbassan/spicetify-galaxy/blob/main/galaxy.js
    Credits to harbassan
 */
-(function retroblur() {
+(async function retroblur() {
     const YouTubeSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><g fill="gray"><rect width="14.3" height="3.7" x=".8" y="11.5" ry=".1"/><rect width="5" height="5.6" x="-9.6" y="8.2" rx="0" ry=".1" transform="matrix(.63163 -.77527 .80715 .59035 0 0)"/><rect width="4.5" height="4.6" x="-1.3" y="13.1" rx="0" ry=".1" transform="matrix(.9021 -.43155 .62218 .78288 0 0)"/></g><g fill="#fff"><rect width="16" height="1.6" ry=".8"/><rect width="16" height="1.6" y="14.4" ry=".8"/><rect width="1.5" height="15.9" y=".1" ry=".8"/><rect width="1.7" height="15.9" x="14.3" ry=".8"/><ellipse cx="11.2" cy="4.4" rx="1.8" ry="1.9"/><rect width="2.7" height=".5" x="6.3" y="4.2" ry=".2"/><rect width="2.7" height=".5" x="4.9" y="7.1" ry=".2" transform="rotate(-14)"/><rect width="2.1" height=".5" x="6.6" y="-11.3" ry=".2" transform="rotate(90)"/><rect width="2.7" height=".5" x="7.1" y=".1" ry=".2" transform="rotate(18)"/><rect width="2.7" height=".5" x="-4.6" y="11.6" ry=".2" transform="rotate(-67)"/><rect width="2.7" height=".5" x="10" y="-9.6" ry=".2" transform="rotate(70)"/><rect width="2.7" height=".5" x=".1" y="10.5" ry=".2" transform="rotate(-43)"/></g></svg>`
     if (!(Spicetify.Player.data && Spicetify.Platform)) {
       setTimeout(retroblur, 100);
       return;
     }
+    if (typeof Marketplace !== 'undefined') console.log("(Retroblur) Selected marketplace theme: "+Marketplace.export()["marketplace:installed-themes"])
+    async function waitForMarketplaceColors() {
+      return new Promise((resolve) => {
+        setInterval(() => {
+          if (typeof Marketplace == 'undefined' || Marketplace.export()["marketplace:installed-themes"] == "[]") resolve(null);
+          const marketplaceScheme = document.querySelector("style.marketplaceCSS.marketplaceScheme");
+          if (marketplaceScheme) {
+            resolve(marketplaceScheme);
+          }
+        }, 50);
+      });
+    }
   
-    console.log("retroblur wallpaper changer running");
+    console.log("(Retroblur) Wallpaper Changer running");
   
     Object.keys(localStorage).forEach(item => {
       if (item.includes("retroblur:temp")) localStorage.removeItem(item);
@@ -28,30 +40,32 @@
     }
   
     var defImage = `https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true`;
-    console.log(getComputedStyle(document.body).getPropertyValue("--spice-button"))
-    switch (getComputedStyle(document.body).getPropertyValue("--spice-button")) {
+    console.log("(Retroblur) Button color is '"+getComputedStyle(document.body).getPropertyValue("--spice-button")+"'")
+    const marketplaceSchemeCSS = await waitForMarketplaceColors();
+    const buttonColor = marketplaceSchemeCSS == null ? getComputedStyle(document.body).getPropertyValue("--spice-button") : getComputedStyle(marketplaceSchemeCSS).getPropertyValue("--spice-button");
+    switch (buttonColor) {
         case " #00bbff": {
-            console.log("setting default wallpaper to water");
+            console.log("(Retroblur) Setting default wallpaper to Water");
             defImage = "https://images.unsplash.com/photo-1502933691298-84fc14542831?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
             break;
         }
         case " #b0fd68": {
-            console.log("setting default wallpaper to lush");
+            console.log("(Retroblur) Setting default wallpaper to Lush");
             defImage = "https://images3.alphacoders.com/356/35627.jpg";
             break;
         }
         case " #ceeb26": {
-            console.log("setting default wallpaper to sun");
+            console.log("(Retroblur) Setting default wallpaper to Sun");
             defImage = "https://images.unsplash.com/photo-1516370873344-fb7c61054fa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
             break;
         }
         case " #ebb726": {
-            console.log("setting default wallpaper to sunset");
+            console.log("(Retroblur) Setting default wallpaper to Sunset");
             defImage = "https://4kwallpapers.com/images/walls/thumbs_3t/4928.jpg";
             break;
         }
         case " #a10003": {
-            console.log("setting default wallpaper to mercy");
+            console.log("(Retroblur) Setting default wallpaper to Mercy");
             defImage = "https://images3.alphacoders.com/356/35627.jpg";
             break;
         }
@@ -63,7 +77,7 @@
       var image = imageData;
       if (config.matchWallpaperToTheme) image = defImage;
       document.body.style.backgroundImage = "url("+image+")";
-      console.log("setBG"+image)
+      console.log("(Retroblur) Setting Wallpaper: "+image)
     }
   
     // input for custom background images

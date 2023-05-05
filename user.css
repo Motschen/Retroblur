@@ -6,7 +6,8 @@
   --scrollbars: unset;
   --spice-main: transparent;
   --spice-misc: rgba(30, 30, 30, 0.8);
-  --spice-player: rgba(30, 30, 30, 0.5);
+  --spice-player: rgba(30, 30, 30, 0.45);
+  --retroblur-player: rgba(30, 30, 30, 0.45); /* --spice-player is changed by marketplace on color change */
 }
 /*
  Set the wallpaper to one matching your color scheme
@@ -37,7 +38,7 @@
 body {
     /* Set the wallpaper link below */
     /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
-    background-image: linear-gradient(left, #000000, #000000);
+    background: #000000;
     /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
     background-repeat: no-repeat;
     background-size: 100%;
@@ -161,9 +162,10 @@ div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div
     color: black;
     opacity: 90%;
 }
-.iUSAh1wdhXLk9hHSbkCA.hsrxlVHxK0zZrgarkxuA:after {
+#main > div > div.Root__top-container.Root__top-container--right-sidebar-hidden > div.Root__now-playing-bar > footer > div.main-nowPlayingBar-nowPlayingBar > div.main-nowPlayingBar-right > div > div.main-contextMenu-tippyWrapper > div > div {
     transform: scaleY(-1);
     bottom: 67px;
+    opacity: 90%;
 }
 .yaVzc4bseRnztmfRv_u3, .volume-bar .progress-bar__slider {
     filter: drop-shadow(0 0 6px var(--spice-button)) !important;
@@ -235,6 +237,7 @@ div.GlueDropTarget.personal-library {
 /* Shows a reflection of the big cover image */
 .main-coverSlotExpanded-container {
     -webkit-box-reflect: below;
+    position: initial;
 }
 .main-home-content, .main-entityHeader-backgroundColor, .main-actionBar-ActionBar, .content-spacing, :root, .main-navBar-navBar, .D_XKXBZDhgpM1KrmKy3O, .spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints {
     background-color: transparent !important;
@@ -940,7 +943,7 @@ CANVAS!!!
 /* Fix your podcasts items having no background */
 .TT1tIewS2iI8Uz8kLuQB {
   backdrop-filter: blur(10px);
-  background: var(--spice-player);
+  background: var(--retroblur-player);
   border-radius: 10px;
 }
 .TT1tIewS2iI8Uz8kLuQB:hover {
@@ -950,7 +953,7 @@ CANVAS!!!
 #marketplace-readme, .x-settings-container {
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  background: var(--spice-player) !important;
+  background: var(--retroblur-player) !important;
 }
 #marketplace-readme a {
   color: var(--spice-text) !important;
@@ -1095,4 +1098,14 @@ span.toggle.enabled {
 }
 #wallpaper-select > div.main-playlistEditDetailsModal-imageChangeButton > div > button {
   border-radius: 10px;
+}
+.playlist-playlist-playlistContent {
+  background: transparent;
+}
+/* Fixes bottom bar not being transparent after color change in marketplace */
+.main-nowPlayingBar-container {
+  background-color: var(--retroblur-player);
+}
+a[class*='-tabBar-active'] {
+  backdrop-filter: blur(2px);
 }
