@@ -16,7 +16,7 @@
  Bridge (Mercy): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_red.jpg?raw=true
  Bridge (Lush): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_green.jpg?raw=true
  Bridge (Sun): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_yellow.jpg?raw=true
- Bridge (Water: https://github.com/Motschen/Retroblur/blob/fresh/assets/background_blue.jpg?raw=true
+ Bridge (Water): https://github.com/Motschen/Retroblur/blob/fresh/assets/background_blue.jpg?raw=true
     Bridge Wallpaper Source: https://wallpapercave.com/wp/wp5003466.jpg
  Forest (Lush): https://i.imgur.com/hnpaDeR.jpg
 
@@ -961,7 +961,7 @@ CANVAS!!!
 /* Makes context menus transparent & blurred */
 .main-contextMenu-menu {
   background-color: var(--spice-misc);
-  backdrop-filter: blur(10px);
+  /*backdrop-filter: blur(10px); temporarily disabled, as this breaks sub-menus :( */
 }
 /* Fixes playlist icon shadow being cut off */
 .main-entityHeader-shadow {
