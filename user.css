@@ -458,6 +458,7 @@ div.GlueDropTarget.personal-library >*.active > div.main-rootlist-statusIcons > 
 .main-trackList-indexable {
   border-bottom: 16px solid rgba(30, 30, 30, 0.4) !important;
   border-radius: 0 0 var(--border-radius-1) var(--border-radius-1);
+  backdrop-filter: blur(14px) !important;
 }
 .main-trackList-trackListRow {
   border-radius: var(--border-radius-2);
@@ -1108,4 +1109,27 @@ span.toggle.enabled {
 }
 a[class*='-tabBar-active'] {
   backdrop-filter: blur(2px);
+}
+/* Fixes certain overlays being unreadable */
+.XBJ5gUPLDUdlCFkWV7PZ {
+  text-align: center;
+  align-self: center;
+  color: var(--spice-text)
+}
+.Button-md-24-buttonTertiary-useBrowserDefaultFocusStyle {
+  color: var(--spice-subtext);
+}
+.Button-md-24-buttonTertiary-useBrowserDefaultFocusStyle:hover {
+  color: var(--spice-text) !important;
+}
+.GenericModal > div {
+  backdrop-filter: blur(14px);
+  background: var(--retroblur-player);
+}
+.main-trackCreditsModal-header {
+  backdrop-filter: none !important;
+}
+/* Fixes white glow applying to enlarged cover image */
+.main-coverSlotExpanded-container > div > a:hover {
+  animation: none;
 }
