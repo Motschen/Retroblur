@@ -41,7 +41,7 @@
   
     var defImage = `https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true`;
     console.log("(Retroblur) Button color is '"+getComputedStyle(document.body).getPropertyValue("--spice-button")+"'")
-    const marketplaceSchemeCSS = await waitForMarketplaceColors();
+    const marketplaceSchemeCSS = null;//await waitForMarketplaceColors();
     const buttonColor = marketplaceSchemeCSS == null ? getComputedStyle(document.body).getPropertyValue("--spice-button") : getComputedStyle(marketplaceSchemeCSS).getPropertyValue("--spice-button");
     switch (buttonColor) {
         case " #00bbff": {

@@ -43,6 +43,22 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+.nav-ylx .Root__top-container {
+  background: transparent;
+}
+.main-yourLibraryX-libraryContainer.main-yourLibraryX-libraryIsExpanded.main-yourLibraryX-libraryIsCollapsed {
+  padding-bottom: 0px;
+}
+.nav-ylx .Root__now-playing-bar, .nav-ylx .main-nowPlayingBar-container {
+  border-radius: var(--border-radius-2) !important;
+}
+/* Fixes flickering in certain screens */
+.nav-ylx .Root__main-view .os-viewport {
+  border-radius: 0px;
+}
+.spotify__os--is-linux.spotify__container--is-desktop .nav-ylx .Root__top-container {
+  padding-top: var(--sidebar-y-offset);
+}
 /* Fixed navbar overlapping on top Spotify's menu in Windows */
 .spotify__os--is-linux.spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints {
   padding-top: var(--sidebar-y-offset);
@@ -82,8 +98,9 @@ body {
 
 /* Fix the navbar icons not showing when selected */
 .home-active-icon, .search-active-icon, .collection-active-icon {
-  color: black;
-  fill: black;
+  color: white;
+  fill: white;
+  filter: drop-shadow(0px 0px 10px white);
 }
 
 /* Make the friend list transparent and blured */
@@ -174,8 +191,8 @@ div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div
     overflow: hidden !important;
 }
 .Root__now-playing-bar {
-    backdrop-filter: blur(14px) !important;
-    background-color: rgba(30, 30, 30, 0.6) !important;
+  backdrop-filter: blur(14px) !important;
+  background-color: rgba(30, 30, 30, 0.6) !important;
 }
 @keyframes fadingGlow {
   from {} to { filter: drop-shadow(0 0 6px var(--spice-button)); }
@@ -237,7 +254,11 @@ div.GlueDropTarget.personal-library {
 /* Shows a reflection of the big cover image */
 .main-coverSlotExpanded-container {
     -webkit-box-reflect: below;
-    position: initial;
+}
+.main-coverSlotExpanded-containerExpanding {
+    -webkit-box-reflect: below;
+    bottom: -9px;
+    left: calc(100vw - 284px);
 }
 .main-home-content, .main-entityHeader-backgroundColor, .main-actionBar-ActionBar, .content-spacing, :root, .main-navBar-navBar, .D_XKXBZDhgpM1KrmKy3O, .spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints {
     background-color: transparent !important;
@@ -247,6 +268,10 @@ div.GlueDropTarget.personal-library {
 .Root__nav-bar {
     background-color: rgba(30, 30, 30, 0.4);
     backdrop-filter: blur(14px) !important;
+}
+.nav-ylx .Root__nav-bar {
+  border-radius: 8px;
+  /*margin-bottom: 8px;*/
 }
 /* scrollbars */
 .os-scrollbar {
@@ -458,7 +483,6 @@ div.GlueDropTarget.personal-library >*.active > div.main-rootlist-statusIcons > 
 .main-trackList-indexable {
   border-bottom: 16px solid rgba(30, 30, 30, 0.4) !important;
   border-radius: 0 0 var(--border-radius-1) var(--border-radius-1);
-  backdrop-filter: blur(14px) !important;
 }
 .main-trackList-trackListRow {
   border-radius: var(--border-radius-2);
@@ -721,6 +745,9 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   color: var(--spice-text) !important;
   filter: drop-shadow(0 0 6px var(--spice-text)) !important;
 }
+.nav-ylx .playback-bar__progress-time, .nav-ylx .playback-bar__progress-time-elapsed, .nav-ylx .main-playbackBarRemainingTime-container {
+  bottom: -39px;
+}
 .playback-bar__progress-time:first-child {
   margin-right: 30px;
 }
@@ -770,6 +797,12 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   width: 100%;
   bottom: 83px;
   position: absolute;
+}
+.nav-ylx .playback-bar {
+  bottom: 63.52px;
+  left: 0px;
+  margin-left: 3.2px;
+  width: calc(100vw - 24px);
 }
 .playback-bar .progress-bar__bg, .playback-bar .progress-bar__fg_wrapper, .playback-bar .progress-bar__fg {
   border-radius: 0;
