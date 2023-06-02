@@ -39,7 +39,7 @@
         setBg(startImage);
     }
   
-    var defImage = `https://github.com/Motschen/Retroblur/blob/main/assets/background_purple.jpg?raw=true`;
+    var defImage = `'https://wallpapercrafter.com/th8001/521119-water-glacier-ice-cave-cave-sea-cave-formation.jpg'/>raw=true`;
     console.log("(Retroblur) Button color is '"+getComputedStyle(document.body).getPropertyValue("--spice-button")+"'")
     const marketplaceSchemeCSS = null;//await waitForMarketplaceColors();
     const buttonColor = marketplaceSchemeCSS == null ? getComputedStyle(document.body).getPropertyValue("--spice-button") : getComputedStyle(marketplaceSchemeCSS).getPropertyValue("--spice-button");
