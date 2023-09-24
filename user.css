@@ -43,21 +43,30 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.nav-ylx .Root__top-container {
+.Root__top-container {
   background: transparent;
 }
 .main-yourLibraryX-libraryContainer.main-yourLibraryX-libraryIsExpanded.main-yourLibraryX-libraryIsCollapsed {
   padding-bottom: 0px;
 }
-.nav-ylx .Root__now-playing-bar, .nav-ylx .main-nowPlayingBar-container {
+.Root__now-playing-bar, .main-nowPlayingBar-container {
   border-radius: var(--border-radius-2) !important;
+}
+/* Compact left sidebar */
+.main-yourLibraryX-navItem {
+  padding: 1px 12px;
+}
+.main-yourLibraryX-header {
+  position: relative;
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 /* Fixes flickering in certain screens */
 .nav-ylx .Root__main-view .os-viewport {
   border-radius: 0px;
 }
-.spotify__os--is-linux.spotify__container--is-desktop .nav-ylx .Root__top-container {
-  padding-top: var(--sidebar-y-offset);
+.spotify__os--is-linux.spotify__container--is-desktop .Root__top-container {
+  padding-top: var(--panel-gap);
 }
 /* Fixed navbar overlapping on top Spotify's menu in Windows */
 .spotify__os--is-linux.spotify__container--is-desktop:not(.fullscreen) .main-navBar-entryPoints {
@@ -122,7 +131,7 @@ body {
 
 /* Fixed elapsed time overlapping with the mic button */
 .playback-bar__progress-time, .playback-bar__progress-time-elapsed, .main-playbackBarRemainingTime-container {
-  right: 265px;
+  right: 325px;
 }
 
 /* Make the selected track in playlist more readable */
@@ -174,15 +183,22 @@ div[aria-selected="true"] > div > div.main-trackList-rowSectionStart > div > div
     right: 16px;
     bottom: 106px;
 }
+.main-connectBar-connectBar {
+  bottom: 86px;
+}
 .main-connectBar-connectBar, .iUSAh1wdhXLk9hHSbkCA.hsrxlVHxK0zZrgarkxuA:after {
     filter: drop-shadow(0 0 6px var(--spice-button)) !important;
     color: black;
     opacity: 90%;
 }
+.main-devicePicker-indicator.main-devicePicker-connected,
 #main > div > div.Root__top-container.Root__top-container--right-sidebar-hidden > div.Root__now-playing-bar > footer > div.main-nowPlayingBar-nowPlayingBar > div.main-nowPlayingBar-right > div > div.main-contextMenu-tippyWrapper > div > div {
     transform: scaleY(-1);
     bottom: 67px;
     opacity: 90%;
+}
+.main-devicePicker-indicator.main-devicePicker-connected {
+    bottom: 56px;
 }
 .yaVzc4bseRnztmfRv_u3, .volume-bar .progress-bar__slider {
     filter: drop-shadow(0 0 6px var(--spice-button)) !important;
@@ -268,10 +284,7 @@ div.GlueDropTarget.personal-library {
 .Root__nav-bar {
     background-color: rgba(30, 30, 30, 0.4);
     backdrop-filter: blur(14px) !important;
-}
-.nav-ylx .Root__nav-bar {
-  border-radius: 8px;
-  /*margin-bottom: 8px;*/
+    border-radius: 8px;
 }
 /* scrollbars */
 .os-scrollbar {
@@ -745,7 +758,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   color: var(--spice-text) !important;
   filter: drop-shadow(0 0 6px var(--spice-text)) !important;
 }
-.nav-ylx .playback-bar__progress-time, .nav-ylx .playback-bar__progress-time-elapsed, .nav-ylx .main-playbackBarRemainingTime-container {
+.playback-bar__progress-time, .playback-bar__progress-time-elapsed, .main-playbackBarRemainingTime-container {
   bottom: -39px;
 }
 .playback-bar__progress-time:first-child {
@@ -794,11 +807,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   background-color: var(--spice-button);
 }
 .playback-bar {
-  width: 100%;
-  bottom: 83px;
   position: absolute;
-}
-.nav-ylx .playback-bar {
   bottom: 63.52px;
   left: 0px;
   margin-left: 3.2px;
@@ -933,6 +942,12 @@ CANVAS!!!
   to {
     background-position: 100% 0%;
   }
+}
+.BoxComponent-group-tinted-listRow-isInteractive-hasLeadingOrMedia-paddingBlockStart_8px-paddingBlockEnd_8px-minBlockSize_56px-padding_8px {
+  background: linear-gradient(45deg, rgba(var(--spice-rgb-selected-row),0.3), 40%, rgba(var(--spice-rgb-subtext),0.3), 80%, rgba(var(--spice-rgb-selected-row),0.3));
+  background-position: 0% 100%;
+  background-size: 200% 200%;
+  animation: gradientFade 3s linear infinite alternate;
 }
 .playback-bar .x-progressBar-fillColor, .volume-bar .x-progressBar-fillColor {
   background: linear-gradient(45deg, var(--spice-selected-row), 40%, var(--spice-subtext), 80%, var(--spice-selected-row));
@@ -1165,4 +1180,10 @@ a[class*='-tabBar-active'] {
 /* Fixes white glow applying to enlarged cover image */
 .main-coverSlotExpanded-container > div > a:hover {
   animation: none;
+}
+
+/* NCS Visualizer theming */
+.app-module__container___thHYo_ncsDvisualizer {
+  background-color: rgba(var(--spice-rgb-card),0.4);
+  backdrop-filter: blur(3px);
 }
